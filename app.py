@@ -39,8 +39,9 @@ def get_vector_store(text_chunks):
 # Function to create a conversational chain
 def get_conversational_chain():
     prompt_template = """
-    Answer the question as detailed as possible from the provided context. 
-    If the answer is not in the context, reply with "Answer is not available in the context."
+    Answer the question as detailed as possible.
+    Answer the question based even if its not present inside Pdf.
+    Answer the question even if it is outside of pdf.
     
     Context: {context}
     Question: {question}
