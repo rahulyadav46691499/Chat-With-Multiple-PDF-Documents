@@ -49,7 +49,7 @@ def get_conversational_chain():
     Answer:
     """
 
-    model = ChatGoogleGenerativeAI(api_key=GOOGLE_API_KEY,model="gemini-pro")
+    model = ChatGoogleGenerativeAI(api_key=GOOGLE_API_KEY,model="gemini-2.0-flash")
     prompt = PromptTemplate(template=prompt_template, input_variables=["context", "question"])
     return load_qa_chain(model, chain_type="stuff", prompt=prompt)
 
